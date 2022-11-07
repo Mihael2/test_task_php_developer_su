@@ -71,8 +71,9 @@
         success: function(result) {
           alert('Article edited successfully!');
         },
-        error: function(err){
-          console.log(err);
+        error: function(error){
+          let message = JSON.parse(error.responseText);
+          alert(message.message);
         }
       });
     });

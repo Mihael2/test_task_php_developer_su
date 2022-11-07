@@ -73,6 +73,10 @@
         },
         success: function(result) {
           alert('Blog updated successfully!');
+        },
+        error: function(error){
+          let message = JSON.parse(error.responseText);
+          alert(message.message);
         }
       });
     });

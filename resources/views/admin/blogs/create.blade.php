@@ -66,6 +66,10 @@
         },
         success: function(result) {
           alert('Blog created successfully!');
+        },
+        error: function(error){
+          let message = JSON.parse(error.responseText);
+          alert(message.message);
         }
       });
     });

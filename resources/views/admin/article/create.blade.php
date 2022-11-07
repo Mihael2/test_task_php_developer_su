@@ -60,6 +60,10 @@
         },
         success: function(result) {
           alert('Article created successfully!');
+        },
+        error: function(error){
+          let message = JSON.parse(error.responseText);
+          alert(message.message);
         }
       });
     });

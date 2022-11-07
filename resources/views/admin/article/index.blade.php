@@ -90,8 +90,9 @@
         success: function(result) {
           alert('Article deleted successfully!');
         },
-        error: function(err) {
-          console.log(err)
+        error: function(error){
+          let message = JSON.parse(error.responseText);
+          alert(message.message);
         }
       });
     });
